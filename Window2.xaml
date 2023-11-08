@@ -1,0 +1,74 @@
+<Window x:Class="clock.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		Height="300"
+		Width="300"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        mc:Ignorable="d"
+        MouseDown="Window2_MouseDown" MouseMove="Window2_MouseMove" 
+        MouseUp="Window2_MouseUp" WindowStartupLocation="CenterScreen" MouseLeave="Window2_MouseLeave">
+
+    
+    <Window.Resources>
+    
+	
+      <Style TargetType="Button" x:Key="Default">    
+        <Setter Property="Control.FontFamily" Value="Verdana" />
+        <Setter Property="Background" Value="Black" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="DemiBold" />
+        <Setter Property="Template">
+          <Setter.Value>
+            <ControlTemplate TargetType="Button">
+              <Grid>
+                <Border Background="{TemplateBinding Background}" CornerRadius="1"/>
+                <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+              </Grid>  
+            </ControlTemplate>
+          </Setter.Value>
+        </Setter>
+      </Style>
+
+      <Style TargetType="Button" BasedOn="{StaticResource  Default}" x:Key="Red">
+        <Style.Triggers>
+          <Trigger Property="IsMouseOver" Value="True">
+            <Setter Property="Background" Value="Red" />
+          </Trigger>
+        </Style.Triggers>
+      </Style>
+      <Style TargetType="Button" BasedOn="{StaticResource  Default}" x:Key="Blue">
+        <Style.Triggers>
+          <Trigger Property="IsMouseOver" Value="True">
+            <Setter Property="Background" Value="SkyBlue" />
+          </Trigger>
+        </Style.Triggers>
+      </Style>
+	  </Window.Resources>
+
+  <Grid>
+      <Grid.ColumnDefinitions>
+		  <ColumnDefinition Width="15*"/>
+		  <ColumnDefinition Width="1*"/>
+		  
+	  </Grid.ColumnDefinitions>
+	  <Viewbox>
+        <Calendar  Background="Black" Foreground="White" Name="calendar" FirstDayOfWeek="Monday" 
+                                                SelectedDatesChanged="calendar_SelectedDatesChanged">
+            
+        </Calendar>
+    </Viewbox>
+	
+	  <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="1">
+		  <Button Click="CencelCal_Click" Name="cencelCal" Content="X" Style="{StaticResource Red}" Visibility="Hidden" >
+      </Button>
+      <Button MaxHeight="30" MaxWidth="30" Name="open_wathc" Click="Open_Watch" Style="{StaticResource Blue}" Visibility="Hidden" >
+        <Image Source="F:\VSCode\clock\watch_icon.png"/>
+      </Button>
+	  </StackPanel>
+	
+  </Grid>
+  </Window>

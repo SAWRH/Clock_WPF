@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "d+LFuw+Q06+LEydMuoIjdeCFxxzJ3hcu1wyUS0ys+WKHqPCv5bfmBQlW0YDOp447eLJieU7CkSlGA43NaF9zIQ==",
+  "success": true,
+  "projectFilePath": "F:\\VSCode\\clock\\clock.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NoutMishi\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\NoutMishi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\NoutMishi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\NoutMishi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://teamcity.monogame.net/guestAuth/app/nuget/feed/_Root/default/v3/index.json'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
